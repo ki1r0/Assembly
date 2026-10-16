@@ -1,0 +1,13 @@
+# Host planner only. Isaac Lab/torch are provided by the simulation container.
+pydantic-ai-slim[anthropic,openai]==2.53.0
+pydantic-ai-harness==0.53.0
+pydantic>=2
+jsonschema>=4.18
+numpy>=1.26
+scipy>=1.11
+Pillow>=10
+opencv-python-headless>=4.9
+imageio>=2
+imageio-ffmpeg>=0.5
+PyYAML>=6
+httpx>=0.27

@@ -1,0 +1,17 @@
+{
+  "source": "Offline actual CAD wall cross-sections; task preparation only, never actor input",
+  "cover_translation_correction_m": [
+    5.19453670744241e-06,
+    0.0007643933777753097,
+    -0.00016240024566649414
+  ],
+  "selected_hole_xy_m": [
+    0.4200052000090044,
+    0.010264395315650134
+  ],
+  "cap_support_plane_z_m": 0.8117933042216797,
+  "casing_entry_plane_z_m": 0.7917933042216797,
+  "casing_interior_floor_z_m": 0.7497929685283203,
+  "tolerances_changed": false,
+  "radii_or_collision_meshes_changed": false
+}

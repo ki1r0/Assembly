@@ -1,0 +1,72 @@
+condition: S0
+bolt_mass_kg: 0.045
+smoke_steps: 120
+wrench_warmup_steps: 180
+wrench_stationary_sample_count: 30
+task_rot_deriv_scale: 10.0
+task_translation_prop_gain: 1000.0
+task_spec:
+  task_id: m6_hub_bolt_01_top_to_socket_bolt_hub_4_no_thread
+  target_id: M6_Hub_Bolt_01_top
+  socket_id: socket_bolt_hub_4
+  assembly_direction:
+  - 0.0
+  - 0.0
+  - -1.0
+  nominal_dimensions:
+    bolt_diameter_m: 0.011767996864261015
+    bolt_length_m: 0.04400000208988786
+    clearance_m: 0.0003379282693340624
+selected_cad_steps:
+  cover: OutputHubCover
+  casing: CasingTop
+  bolt: M6_01_top
+  socket: socket4
+model:
+  endpoint: http://127.0.0.1:18081/v1/chat/completions
+  model: Qwen3-VL-2B-Instruct
+pose_window_tolerances:
+  max_position_excursion_m: 0.0001
+  max_orientation_excursion_rad: 0.001
+tolerances:
+  max_cap_support_gap_m: 0.00025
+  min_casing_entry_depth_m: 0.015
+  max_shaft_radial_error_m: 0.0002
+  max_penetration_m: 0.0001
+  max_axial_motion_since_release_m: 0.0002
+  max_relative_linear_speed_mps: 0.002
+  max_relative_angular_speed_radps: 0.01
+  held_seat_dwell_s: 0.25
+  stable_dwell_s: 1.0
+  max_sample_gap_s: 0.033333333
+sampling_criteria:
+  cap_support:
+    max_cap_patch_error_m: 0.0001
+    max_contact_separation_m: 0.0001
+    min_normal_alignment_cosine: 0.95
+    normal_axis_sign: 1
+    min_contact_force_n: 0.1
+  min_cap_grasp_local_y_m: 0.017850002289
+  max_cap_grasp_patch_error_m: 0.0002
+  max_cap_grasp_contact_separation_m: 0.0001
+  min_cap_grasp_force_n: 0.05
+  max_cap_grasp_normal_alignment_cosine: 0.25
+  max_robot_contact_separation_m: 0.0001
+  min_robot_contact_force_n: 0.02
+  max_controller_tcp_linear_speed_mps: 0.002
+  max_controller_tcp_angular_speed_radps: 0.01
+  max_controller_arm_joint_speed_radps: 0.01
+  max_tcp_tracking_error_m: 0.003
+  max_tcp_orientation_tracking_error_rad: 0.005
+  release_gripper_width_m: 0.079
+  min_pickup_root_lift_m: 0.005
+executor:
+  max_gripper_force_n: 12.0
+  max_insertion_force_n: 3.0
+max_gripper_force_n: 12.0
+grasp_cap_pad_overlap_m: 0.0073
+episode_length_s: 600.0
+tcp_tracking_stop_error_m: 0.02
+tcp_tracking_stop_orientation_rad: 0.2
+tcp_linear_speed_stop_mps: 0.08
+tcp_angular_speed_stop_radps: 0.8
