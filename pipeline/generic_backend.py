@@ -839,7 +839,9 @@ def main():
                     if pressure is not None and min(forces)<.2:pressure=min(pressure,2.)
                     jaw_references[arm]=jaw_reference_step(jaw_references[arm],widths[arm],max(forces),pressure,dt)
                     joint_targets[:,data['grips']]=jaw_joint_target(jaw_references[arm])
-                robot.set_joint_position_target(joint_targets);robot.write_data_to_sim()
+                    # Jaw updates must not overwrite the arm controller's position reference.
+                    robot.set_joint_position_target(joint_targets[:,data['grips']],joint_ids=data['grips'])
+                robot.write_data_to_sim()
             if torque_controller is not None:
                 forces=jaw_pressure('left');pressure=grip_force_targets.get('left')
                 if pressure is not None and min(forces)<.2:pressure=min(pressure,2.)
