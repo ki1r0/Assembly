@@ -1,5 +1,6 @@
 from pathlib import Path
 import ast
+import pytest
 
 import numpy as np
 from scipy.spatial.transform import Rotation
@@ -18,6 +19,7 @@ def test_model_tool_description_matches_g1_motion_only_score():
     assert 'never just the smaller clearance' in description
 
 
+@pytest.mark.cad_assets
 def test_steep_side_proposal_survives_actual_pad_and_full_opening_screen():
     root=Path(__file__).parents[1]
     geometry=G1Geometry(root/'assets/xarm7/xarm7_g1_simulation_assumption.urdf')

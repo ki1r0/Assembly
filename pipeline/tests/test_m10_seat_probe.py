@@ -1,9 +1,11 @@
 import json
+import pytest
 
 import settings
 from fixture_geometry import m10_seat_probe_geometry
 
 
+@pytest.mark.cad_assets
 def test_m10_flange_and_table_clearance_are_derived_from_current_cad():
     root = settings.ROOT
     g = m10_seat_probe_geometry(root/'assets/public_cad_models/casing_top.npz', root/'assets/public_cad_models/m10_bolt.npz')

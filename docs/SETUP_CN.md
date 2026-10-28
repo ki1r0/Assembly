@@ -25,6 +25,15 @@ Panda 镜像相对位置：`vendor/remote_mirror/omniverse-content-production.s3
 
 ## 生成 xArm 模型
 
+仅做离线几何测试时，无需 Isaac/USD 转换：
+
+```bash
+PYTHON=pipeline/.venv/bin/python bash scripts/prepare_xarm_offline.sh
+```
+
+生成器不覆盖已有模型。已有输出时勿重复生成；在新工作站应重新生成绝对mesh路径。
+完整仿真模型仍使用下述脚本，不要先单独生成URDF再直接重复调用完整脚本。
+
 ```bash
 GPU=0 bash scripts/prepare_xarm_model.sh
 ```
@@ -32,6 +41,17 @@ GPU=0 bash scripts/prepare_xarm_model.sh
 脚本下载官方 `xArm-Developer/xarm_ros2` 的既有实验版本，展开 G1 URDF 并在 Isaac 中转换 USD。URDF 使用当前工作站绝对 mesh 路径，所以必须在新机器重新生成，不能移动旧生成目录后直接沿用。输出已有时拒绝覆盖，避免无意改掉已标定模型。实际夹爪未确认前，G1 只是仿真假设。
 
 ## 无模型场景 smoke
+
+首次运行前，从合法取得的USD生成公开CAD采样缓存：
+
+```bash
+ASSEMBLY_ASSET_ROOT=/absolute/path/to/assets bash scripts/prepare_cad_cache.sh
+```
+
+公共GitHub CI自动准备官方机器人URDF/网格，执行`pytest tests -m 'not cad_assets'`。
+它明确不覆盖需要未分发装配CAD的4项集成测试，不能代替全量验收。
+在有合法资产的工作站，额外执行`cd pipeline && .venv/bin/python -m pytest tests -m cad_assets -q`；
+默认`pytest tests -q`仍包含这些测试，缺失资产仍会失败，不会静默跳过。
 
 ```bash
 set -a

@@ -46,6 +46,7 @@ def test_transfer_bearing_exposes_original_negative_x_seat_and_wide_face_leads()
     assert profile['physical_gt_verified'] is False
 
 
+@pytest.mark.cad_assets
 def test_oil_indicator_uses_cad_y_axis_without_resolving_port_or_fixture(monkeypatch):
     monkeypatch.setenv("ASSEMBLY_TASK", "oil-level-indicator")
     skill = public_skill_specification()
@@ -180,6 +181,7 @@ def test_m10_nut_scene_reset_aligns_public_bore_and_bolt_axes():
     assert float(nut_axis_world @ bolt_axis_world) > 0.999
 
 
+@pytest.mark.cad_assets
 def test_all_declared_moving_axes_match_public_collision_mesh_principal_axes():
     profiles = json.loads(
         (settings.ROOT / "config/assembly_skills.json").read_text()

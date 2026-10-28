@@ -15,9 +15,12 @@ jobs:
       - run: python launch.py --help
       - run: python -m pytest -q
       - run: python -m pip install -r pipeline/requirements-dev.txt xacro==2.1.1
+      - name: Prepare official xArm URDF and meshes (no simulator)
+        run: bash scripts/prepare_xarm_offline.sh
       - run: python launch.py --help
         working-directory: pipeline
-      - run: python -m pytest tests -q
+      - name: Offline source and public robot tests (licensed CAD integration excluded)
+        run: python -m pytest tests -q -m 'not cad_assets'
         working-directory: pipeline
       - run: PYTHONPATH=benchmark python -m pytest benchmark/tests -q
       - run: PYTHONPATH=benchmark python -m assembly_bench.cli --help

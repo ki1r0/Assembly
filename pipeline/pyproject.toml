@@ -1,3 +1,4 @@
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
+markers = ["cad_assets: integration test requiring licensed external assembly CAD caches"]
