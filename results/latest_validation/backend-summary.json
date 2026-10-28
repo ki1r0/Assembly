@@ -1,0 +1,20 @@
+{
+  "native_success": false,
+  "error": null,
+  "physics_steps": 144,
+  "video_frames": 3,
+  "video_error": null,
+  "terminal": {
+    "event": "endpoint_candidate",
+    "monotonic": 1492567.651851238,
+    "wall_time": 1793175712.4786057,
+    "sequence": 25,
+    "source": "scene_smoke_complete",
+    "last_native_step": 144,
+    "evidence": "Isaac scene initialized and published its first public observation; no model call or robot action was performed."
+  },
+  "robot": "xarm7",
+  "task": "peg",
+  "adapter_is_new": true,
+  "privileged_setup_diagnostic": null
+}

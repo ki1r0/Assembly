@@ -1,0 +1,48 @@
+{
+  "cad_meters_per_source_unit": 0.001,
+  "physical_positive": true,
+  "physical_negatives_rejected": true,
+  "scope": "Small-cover physical endpoint seating, release and half-second retention. Not proof of robot pickup, insertion access, or autonomous task success.",
+  "method": "Deterministic regrading of preserved real physical probe data using pose-window stability and intermittent contact evidence; original native outcomes remain unchanged.",
+  "positive": {
+    "run": "runs/selected-evaluator-tgs192v1-20261024/hub-cover-small-hub-positive-near-seat",
+    "source": "private/evaluator-trace.json, last 60 actual pose/contact samples",
+    "position_excursion_m": 0.000008004864404464978,
+    "radial_error_m": 0.00006201495530565888,
+    "tilt_deg": 0.02596867801028861,
+    "maximum_window_penetration_m": 0.000006452498837461462,
+    "real_contact_samples": 30,
+    "window_samples": 60,
+    "released": true,
+    "regraded_status": "PASS",
+    "solver_position_iterations": 192,
+    "solver_velocity_iterations": 1,
+    "sdf_resolution": 256
+  },
+  "negatives": [
+    {
+      "run": "runs/selected-evaluator-calibration-20261023T183949Z/hub-cover-small-hub-offset-negative",
+      "regraded_status": "FAIL",
+      "reason": "radial_error_out_of_tolerance",
+      "radial_error_m": 0.023389907539244057,
+      "counterfactual_stable_for_rejection_check": true
+    },
+    {
+      "run": "runs/selected-evaluator-calibration-20261023T183949Z/hub-cover-small-hub-tilt-negative",
+      "regraded_status": "FAIL",
+      "reason": "wrong depth, radial position, face direction and absent support",
+      "counterfactual_stable_for_rejection_check": true
+    }
+  ],
+  "negative_scope_note": "Historical negatives used the same geometry/scale with earlier solver settings. They validate rejection of measured wrong endpoint states, not current-solver failure frequencies. Stability is deliberately assumed true only to prove geometric rejection independently; no missing physical stability evidence is asserted.",
+  "stability": {
+    "window_s": 0.5,
+    "maximum_position_excursion_from_window_start_m": 0.001,
+    "maximum_installation_axis_excursion_deg": 0.5,
+    "axial_spin_is_not_axis_tilt": true,
+    "contact": "Real support observed within this same window; no unbounded historical persistence",
+    "penetration": "Maximum over the window, not only final sample"
+  },
+  "pose_tolerances_changed": false,
+  "robot_safety_limits_changed": false
+}

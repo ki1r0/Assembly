@@ -1,0 +1,29 @@
+{
+  "suite_id": "cape_assembly_peg_mvp_v01",
+  "instances": [
+    {"instance_id":"dev-u0","split":"dev","case":"nominal-aligned","xy_m":[0,0]},
+    {"instance_id":"dev-u1","split":"dev","case":"nominal-aligned","xy_m":[0.003,-0.003]},
+    {"instance_id":"dev-h0","split":"dev","case":"bolt-horizontal-pose","xy_m":[0,0]},
+    {"instance_id":"dev-h1","split":"dev","case":"bolt-horizontal-pose","xy_m":[-0.003,0.003]},
+    {"instance_id":"test-u00","split":"test","case":"nominal-aligned","xy_m":[0.001,0.002]},
+    {"instance_id":"test-u01","split":"test","case":"nominal-aligned","xy_m":[-0.002,0.001]},
+    {"instance_id":"test-u02","split":"test","case":"nominal-aligned","xy_m":[0.004,0.001]},
+    {"instance_id":"test-u03","split":"test","case":"nominal-aligned","xy_m":[-0.004,-0.001]},
+    {"instance_id":"test-u04","split":"test","case":"nominal-aligned","xy_m":[0.001,-0.004]},
+    {"instance_id":"test-u05","split":"test","case":"nominal-aligned","xy_m":[-0.001,0.004]},
+    {"instance_id":"test-u06","split":"test","case":"nominal-aligned","xy_m":[0.005,-0.002]},
+    {"instance_id":"test-u07","split":"test","case":"nominal-aligned","xy_m":[-0.005,0.002]},
+    {"instance_id":"test-u08","split":"test","case":"nominal-aligned","xy_m":[0.002,0.005]},
+    {"instance_id":"test-u09","split":"test","case":"nominal-aligned","xy_m":[-0.002,-0.005]},
+    {"instance_id":"test-h00","split":"test","case":"bolt-horizontal-pose","xy_m":[0.001,-0.002]},
+    {"instance_id":"test-h01","split":"test","case":"bolt-horizontal-pose","xy_m":[-0.002,-0.001]},
+    {"instance_id":"test-h02","split":"test","case":"bolt-horizontal-pose","xy_m":[0.004,-0.001]},
+    {"instance_id":"test-h03","split":"test","case":"bolt-horizontal-pose","xy_m":[-0.004,0.001]},
+    {"instance_id":"test-h04","split":"test","case":"bolt-horizontal-pose","xy_m":[0.001,0.004]},
+    {"instance_id":"test-h05","split":"test","case":"bolt-horizontal-pose","xy_m":[-0.001,-0.004]},
+    {"instance_id":"test-h06","split":"test","case":"bolt-horizontal-pose","xy_m":[0.005,0.002]},
+    {"instance_id":"test-h07","split":"test","case":"bolt-horizontal-pose","xy_m":[-0.005,-0.002]},
+    {"instance_id":"test-h08","split":"test","case":"bolt-horizontal-pose","xy_m":[0.002,-0.005]},
+    {"instance_id":"test-h09","split":"test","case":"bolt-horizontal-pose","xy_m":[-0.002,0.005]}
+  ]
+}

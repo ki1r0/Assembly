@@ -1,0 +1,140 @@
+{
+  "evaluator_version": "cape-peg-process-v0.3-collider-dev",
+  "criteria": {
+    "version": "cape-peg-process-v0.3-collider-dev",
+    "support_evidence": "collider_geometry",
+    "aperture_evidence": "collider_sweep",
+    "stable_s": 1.0,
+    "max_sample_gap_s": 0.03333333333333333,
+    "event_dwell_s": 0.1,
+    "radial_m": 0.0002,
+    "tilt_rad": 0.05,
+    "entry_m": 0.01,
+    "support_gap_m": 0.00025,
+    "penetration_m": 0.0001,
+    "linear_speed_mps": 0.002,
+    "angular_speed_radps": 0.01
+  },
+  "time_s": 288.0,
+  "assembly_success": null,
+  "evaluation_status": "uncalibrated",
+  "candidate_physical_success": true,
+  "goal_predicates": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "seat_predicate_stable": true,
+  "q_goal_final_bounds": [
+    1.0,
+    1.0
+  ],
+  "termination_reason": "model_ask_human_help",
+  "process_provenance": true,
+  "initial_state_valid": true,
+  "checkpoints": {
+    "controlled": {
+      "current": false,
+      "ever_reached": true,
+      "first_reached_time_s": 122.85,
+      "last_reached_time_s": 255.25,
+      "total_valid_duration_s": 132.49166666666667,
+      "max_contiguous_duration_s": 132.075,
+      "lost_count": 2
+    },
+    "lifted_retained": {
+      "current": false,
+      "ever_reached": true,
+      "first_reached_time_s": 124.08749999999999,
+      "last_reached_time_s": 255.25,
+      "total_valid_duration_s": 131.2625,
+      "max_contiguous_duration_s": 131.2625,
+      "lost_count": 1
+    },
+    "transported": {
+      "current": false,
+      "ever_reached": true,
+      "first_reached_time_s": 207.2625,
+      "last_reached_time_s": 255.25,
+      "total_valid_duration_s": 48.087500000000006,
+      "max_contiguous_duration_s": 48.087500000000006,
+      "lost_count": 1
+    },
+    "mouth_aligned": {
+      "current": true,
+      "ever_reached": true,
+      "first_reached_time_s": 253.825,
+      "last_reached_time_s": 288.0,
+      "total_valid_duration_s": 33.17083333333332,
+      "max_contiguous_duration_s": 32.70000000000002,
+      "lost_count": 9
+    },
+    "entered": {
+      "current": true,
+      "ever_reached": true,
+      "first_reached_time_s": 255.4,
+      "last_reached_time_s": 288.0,
+      "total_valid_duration_s": 32.70000000000002,
+      "max_contiguous_duration_s": 32.70000000000002,
+      "lost_count": 0
+    },
+    "seated": {
+      "current": true,
+      "ever_reached": true,
+      "first_reached_time_s": 255.4125,
+      "last_reached_time_s": 288.0,
+      "total_valid_duration_s": 32.6875,
+      "max_contiguous_duration_s": 32.6875,
+      "lost_count": 0
+    },
+    "released_seated": {
+      "current": true,
+      "ever_reached": true,
+      "first_reached_time_s": 255.4125,
+      "last_reached_time_s": 288.0,
+      "total_valid_duration_s": 32.6875,
+      "max_contiguous_duration_s": 32.6875,
+      "lost_count": 0
+    },
+    "withdrawn_stable": {
+      "current": true,
+      "ever_reached": true,
+      "first_reached_time_s": 262.4125,
+      "last_reached_time_s": 288.0,
+      "total_valid_duration_s": 25.587499999999977,
+      "max_contiguous_duration_s": 25.587499999999977,
+      "lost_count": 0
+    }
+  },
+  "max_entry_m": 0.055896709441678794,
+  "minimum_radial_m": 0.0001673570225561637,
+  "max_valid_entry_m": 0.012231197194635057,
+  "max_entry_scope": "max_entry_m is raw axial projection, including off-hole poses; max_valid_entry_m requires the selected cover hole and supported casing fit",
+  "timing": {
+    "physics_steps": 69120,
+    "physics_dt_s": 0.004166666666666667,
+    "control_dt_s": 0.05,
+    "simulation_time_s": 288.0,
+    "decision_wall_time_s": 4180.497523657978
+  },
+  "final_measurements": {
+    "through_selected_cover_hole": true,
+    "entered_selected_casing_opening": false,
+    "casing_entry_depth_m": 0.011999974727622709,
+    "shaft_radial_error_m": 0.00020774088133417132,
+    "axis_tilt_rad": 1.1033904879071916e-06,
+    "cap_support_gap_m": 2.527236386828946e-08,
+    "penetration_m": 3.8773856244952304e-05,
+    "cap_support_contact": false,
+    "cap_bearing_geometry_supported": true,
+    "target_finger_forces_n": [
+      0.0,
+      0.0
+    ]
+  },
+  "source_run": "/home/sunsiliang/robot-assembly-experiments/experiments/panda-unified-assembly-peg+hub-20261018/runs/xarm-speed-audit-20261027/upright-feedback-correction-01",
+  "legacy_native_success": false,
+  "evidence_scope": "Recorded measurements; calibration pending, not a certified success rate"
+}

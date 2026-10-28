@@ -1,0 +1,35 @@
+{
+  "source": "Offline actual CAD wall cross-sections expressed relative to the assembly-frame origin; task preparation only, never actor input",
+  "cad_meters_per_source_unit": 0.001,
+  "geometry_scale_status": "source-coordinate offsets recomputed for current scale; physical evaluator revalidation pending",
+  "selected_hole_offset_from_assembly_frame_source_units": [
+    -39.9973999954978,
+    80.1321976578251
+  ],
+  "cap_support_plane_offset_from_assembly_frame_source_units": 37.94832611083985,
+  "casing_entry_plane_offset_from_assembly_frame_source_units": 27.94832611083985,
+  "casing_interior_floor_offset_from_assembly_frame_source_units": 6.94815826416015,
+  "output_cover_root_offset_from_assembly_frame_source_units": [
+    0.002597268353721205,
+    43.80078688822469,
+    30.91879987716674
+  ],
+  "historical_scale_0_002": {
+    "selected_hole_xy_m": [
+      0.4200052000090044,
+      0.010264395315650134
+    ],
+    "cap_support_plane_z_m": 0.8117933042216797,
+    "casing_entry_plane_z_m": 0.7917933042216797,
+    "casing_interior_floor_z_m": 0.7497929685283203,
+    "status": "historical physical calibration; not valid for current 0.001 CAD scale"
+  },
+  "cover_translation_correction_m": [
+    5.19453670744241e-06,
+    0.0007643933777753097,
+    -0.00016240024566649414
+  ],
+  "tolerances_changed": false,
+  "radii_or_collision_meshes_changed": false,
+  "selected_socket_label": "two_oclock"
+}

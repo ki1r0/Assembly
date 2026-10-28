@@ -1,0 +1,111 @@
+{
+  "00-hub-evaluator-positive-from-clearance": {
+    "physical_pass_count": 733,
+    "last": {
+      "step": 792,
+      "task_success": false,
+      "physical_criteria_passed": true,
+      "status": "PROVISIONAL_PASS",
+      "calibration_status": "pending",
+      "reasons": [
+        "calibration_not_final"
+      ],
+      "metrics": {
+        "axial_depth_m": 0.06255417559857179,
+        "radial_error_m": 0.0007950490221196329,
+        "tilt_deg": 0.2865187029002666,
+        "penetration_m": 2.13130988413468e-05,
+        "released": true,
+        "stable": true,
+        "contact_valid": true,
+        "settle_speed_mps": 6.63300897940644e-05,
+        "settle_window_s": 0.5
+      },
+      "pickup_observed": false,
+      "evaluator_only": true
+    }
+  },
+  "00-hub-evaluator-cad-datum-from-clearance": {
+    "physical_pass_count": 733,
+    "last": {
+      "step": 792,
+      "task_success": false,
+      "physical_criteria_passed": true,
+      "status": "PROVISIONAL_PASS",
+      "calibration_status": "pending",
+      "reasons": [
+        "calibration_not_final"
+      ],
+      "metrics": {
+        "axial_depth_m": 0.062397296173522965,
+        "radial_error_m": 0.0006799659640782155,
+        "tilt_deg": 0.1129660168169913,
+        "penetration_m": 7.9239534898079e-06,
+        "released": true,
+        "stable": true,
+        "contact_valid": true,
+        "settle_speed_mps": 5.2262943199821166e-05,
+        "settle_window_s": 0.5
+      },
+      "pickup_observed": false,
+      "evaluator_only": true
+    }
+  },
+  "00-hub-evaluator-offset-negative": {
+    "physical_pass_count": 0,
+    "last": {
+      "step": 792,
+      "task_success": false,
+      "physical_criteria_passed": false,
+      "status": "FAIL",
+      "calibration_status": "pending",
+      "reasons": [
+        "axial_depth_out_of_tolerance",
+        "radial_error_out_of_tolerance",
+        "tilt_out_of_tolerance",
+        "valid_contact_not_observed"
+      ],
+      "metrics": {
+        "axial_depth_m": -0.613234286563446,
+        "radial_error_m": 7.2928741151584635,
+        "tilt_deg": 90.00138742746914,
+        "penetration_m": 0.0,
+        "released": true,
+        "stable": true,
+        "contact_valid": false,
+        "settle_speed_mps": 0.003060213421122171,
+        "settle_window_s": 0.5
+      },
+      "pickup_observed": false,
+      "evaluator_only": true
+    }
+  },
+  "00-hub-evaluator-tilt-negative": {
+    "physical_pass_count": 0,
+    "last": {
+      "step": 6,
+      "task_success": false,
+      "physical_criteria_passed": false,
+      "status": "FAIL",
+      "calibration_status": "pending",
+      "reasons": [
+        "tilt_out_of_tolerance",
+        "not_stable",
+        "settle_window_too_short"
+      ],
+      "metrics": {
+        "axial_depth_m": 0.06893234942669679,
+        "radial_error_m": 0.0016295346950847664,
+        "tilt_deg": 3.0399574637615228,
+        "penetration_m": 5.3392354857351165e-06,
+        "released": true,
+        "stable": false,
+        "contact_valid": true,
+        "settle_speed_mps": 0.0008281503687612712,
+        "settle_window_s": 0.05
+      },
+      "pickup_observed": false,
+      "evaluator_only": true
+    }
+  }
+}

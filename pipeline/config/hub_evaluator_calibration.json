@@ -1,0 +1,79 @@
+{
+  "cad_meters_per_source_unit": 0.002,
+  "physical_positive": true,
+  "physical_negatives_rejected": true,
+  "scope": "Local physical positive and off-centre/tilted negatives for these authored CAD assets and PhysX setup; not exhaustive verification or proof of Panda payload feasibility. Privileged setup trials excluded from model outcomes.",
+  "evidence": [
+    {
+      "type": "positive",
+      "run": "runs/00-hub-evaluator-positive-from-clearance",
+      "physical_pass_samples": 733,
+      "samples": 792,
+      "final_metrics": {
+        "axial_depth_m": 0.06255417559857179,
+        "radial_error_m": 0.0007950490221196329,
+        "tilt_deg": 0.2865187029002666,
+        "penetration_m": 2.13130988413468e-05,
+        "released": true,
+        "stable": true,
+        "contact_valid": true,
+        "settle_speed_mps": 6.63300897940644e-05,
+        "settle_window_s": 0.5
+      }
+    },
+    {
+      "type": "positive",
+      "run": "runs/00-hub-evaluator-cad-datum-from-clearance",
+      "physical_pass_samples": 733,
+      "samples": 792,
+      "final_metrics": {
+        "axial_depth_m": 0.062397296173522965,
+        "radial_error_m": 0.0006799659640782155,
+        "tilt_deg": 0.1129660168169913,
+        "penetration_m": 7.9239534898079e-06,
+        "released": true,
+        "stable": true,
+        "contact_valid": true,
+        "settle_speed_mps": 5.2262943199821166e-05,
+        "settle_window_s": 0.5
+      }
+    },
+    {
+      "type": "negative",
+      "run": "runs/00-hub-evaluator-offset-negative",
+      "physical_pass_samples": 0,
+      "samples": 792,
+      "final_metrics": {
+        "axial_depth_m": -0.613234286563446,
+        "radial_error_m": 7.2928741151584635,
+        "tilt_deg": 90.00138742746914,
+        "penetration_m": 0.0,
+        "released": true,
+        "stable": true,
+        "contact_valid": false,
+        "settle_speed_mps": 0.003060213421122171,
+        "settle_window_s": 0.5
+      }
+    },
+    {
+      "type": "negative",
+      "run": "runs/00-hub-evaluator-tilt-negative-02-sequential-start",
+      "physical_pass_samples": 0,
+      "samples": 792,
+      "final_metrics": {
+        "axial_depth_m": 0.06893217061276247,
+        "radial_error_m": 0.001629503288154234,
+        "tilt_deg": 3.0399586242039045,
+        "penetration_m": 5.3188805395620875e-06,
+        "released": true,
+        "stable": true,
+        "contact_valid": true,
+        "settle_speed_mps": 0.0008447065920336172,
+        "settle_window_s": 0.5
+      }
+    }
+  ],
+  "pose_penetration_tolerances_changed": false,
+  "release_and_angular_stability_checks_strengthened": true,
+  "certified_positive_run": "runs/00-hub-evaluator-certified-cad-datum-v3"
+}

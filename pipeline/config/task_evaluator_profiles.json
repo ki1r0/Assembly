@@ -1,0 +1,241 @@
+{
+  "hub-cover": {
+    "target_socket": "socket_hub_output",
+    "expected_root_offset_m": [0.0, 0.04341859, 0.031],
+    "expected_rotation_xyz_deg": [-90.0, 180.0, 0.0],
+    "calibration_file": "hub_output_scale001_evaluator_calibration.json"
+  },
+  "hub-cover-input": {
+    "target_socket": "socket_hub_input",
+    "expected_root_offset_m": [0.03590541548, -0.05499766546, 0.0318],
+    "expected_rotation_xyz_deg": [0.0, 90.0, 90.0],
+    "calibration_file": "hub_input_evaluator_calibration.json"
+  },
+  "hub-cover-small": {
+    "target_socket": "socket_hub_small",
+    "expected_root_offset_m": [-0.0363, -0.0546, 0.0307],
+    "expected_rotation_xyz_deg": [0.0, 90.0, 0.0],
+    "calibration_file": "hub_small_evaluator_calibration.json"
+  },
+  "output-gear-onto-shaft": {
+    "evaluator_kind": "rigid_pose_seat",
+    "fixture_asset": "parts/Output Shaft.usd",
+    "fixture_rotation_xyz_deg": [90.0, 0.0, 0.0],
+    "fixture_world_xy_m": [0.55, -0.15],
+    "candidate_expected_root_offset_m": [0.0, 0.0, 0.0155],
+    "candidate_expected_rotation_xyz_deg": [0.0, 0.0, 0.0],
+    "candidate_reset_hint": {
+      "moving_rotation_xyz_deg": [-90.0, 0.0, 0.0],
+      "moving_translation_authored": [0.0, 15.5, 0.0],
+      "authored_to_scene_scale": 0.001,
+      "derived_fixture_relative_offset_m": [0.0, 0.0, 0.0155]
+    },
+    "calibration_file": "output_gear_shaft_evaluator_calibration.json",
+    "calibration_status": "pending",
+    "evaluation_status": "pending",
+    "physical_gt_verified": false,
+    "status": "pending_calibration",
+    "calibration_note": "Candidate offsets and rotations are historical kinematic hints only. CAD coordinates are treated as millimetres based on nominal fastener/bearing dimensions; physical positive/negative calibration is still required before native success can be reported.",
+    "notes": "Historical kinematic fit only; no physical GT has been verified."
+  },
+  "transfer-gear-onto-shaft": {
+    "evaluator_kind": "rigid_pose_seat",
+    "fixture_asset": "parts/Transfer Shaft.usd",
+    "fixture_rotation_xyz_deg": [0.0, -90.0, 0.0],
+    "fixture_world_xy_m": [0.55, -0.15],
+    "candidate_expected_root_offset_m": [0.0, 0.0, 0.0221],
+    "candidate_expected_rotation_xyz_deg": [0.0, 0.0, 0.0],
+    "candidate_reset_hint": {
+      "moving_rotation_xyz_deg": [0.0, 90.0, 0.0],
+      "moving_translation_authored": [22.1, 0.0, 0.0],
+      "authored_to_scene_scale": 0.001,
+      "derived_fixture_relative_offset_m": [0.0, 0.0, 0.0221]
+    },
+    "calibration_file": "transfer_gear_shaft_evaluator_calibration.json",
+    "calibration_status": "pending",
+    "evaluation_status": "pending",
+    "physical_gt_verified": false,
+    "status": "pending_calibration",
+    "calibration_note": "Candidate offsets and rotations are historical kinematic hints only. CAD coordinates are treated as millimetres based on nominal fastener/bearing dimensions; physical positive/negative calibration is still required before native success can be reported.",
+    "notes": "Historical kinematic fit only; no physical GT has been verified."
+  },
+  "output-shaft-into-base": {
+    "evaluator_kind": "rigid_pose_seat",
+    "fixture_asset": "parts/Casing Base.usd",
+    "fixture_rotation_xyz_deg": [0.0, 0.0, 0.0],
+    "fixture_world_xy_m": [0.55, -0.15],
+    "candidate_reset_hint": {
+      "moving_rotation_xyz_deg": [-90.0, 0.0, 0.0],
+      "moving_local_phase_y_deg": -52.5,
+      "moving_translation_authored": [0.0, 0.0, -40.0],
+      "authored_to_scene_scale": 0.001,
+      "derived_fixture_relative_offset_m": [0.0, 0.0, -0.04]
+    },
+    "calibration_file": "output_shaft_base_evaluator_calibration.json",
+    "calibration_status": "pending",
+    "evaluation_status": "pending",
+    "physical_gt_verified": false,
+    "status": "pending_calibration",
+    "calibration_note": "The source sequence and collision-on trial inform only scene layout. The historical -40-unit rest offset and -52.5-degree phase are not physical success criteria; seat geometry and positive/negative evaluator calibration remain pending."
+  },
+  "transfer-shaft-into-base": {
+    "evaluator_kind": "rigid_pose_seat",
+    "fixture_asset": "parts/Casing Base.usd",
+    "fixture_rotation_xyz_deg": [0.0, 0.0, 0.0],
+    "fixture_world_xy_m": [0.55, -0.15],
+    "candidate_reset_hint": {
+      "moving_rotation_xyz_deg": [0.0, -90.0, 0.0],
+      "moving_translation_authored": [0.0, 0.0, -40.0],
+      "authored_to_scene_scale": 0.001,
+      "derived_fixture_relative_offset_m": [0.0, 0.0, -0.04]
+    },
+    "calibration_file": "transfer_shaft_base_evaluator_calibration.json",
+    "calibration_status": "pending",
+    "evaluation_status": "pending",
+    "physical_gt_verified": false,
+    "status": "pending_calibration",
+    "calibration_note": "The source sequence and collision-on trial inform only scene layout. The historical -40-unit rest offset is not a physical success criterion; seat geometry and positive/negative evaluator calibration remain pending."
+  },
+  "input-shaft-into-base": {
+    "evaluator_kind": "rigid_pose_seat",
+    "fixture_asset": "parts/Casing Base.usd",
+    "fixture_rotation_xyz_deg": [0.0, 0.0, 0.0],
+    "fixture_world_xy_m": [0.55, -0.15],
+    "candidate_reset_hint": {
+      "moving_rotation_xyz_deg": [-90.0, 0.0, 0.0],
+      "moving_local_phase_y_deg": 88.5,
+      "moving_translation_authored": [0.0, 0.0, -40.0],
+      "authored_to_scene_scale": 0.001,
+      "derived_fixture_relative_offset_m": [0.0, 0.0, -0.04]
+    },
+    "calibration_file": "input_shaft_base_evaluator_calibration.json",
+    "calibration_status": "pending",
+    "evaluation_status": "pending",
+    "physical_gt_verified": false,
+    "status": "pending_calibration",
+    "allow_provisional_open_mesh_mass": true,
+    "calibration_note": "The source sequence and collision-on trial inform only scene layout. The Input Shaft collision mesh is not watertight; its density-derived mass is an explicitly provisional assumption. The historical -40-unit rest offset and 88.5-degree phase are not physical success criteria."
+  },
+  "m10-casing-bolt": {
+    "evaluator_kind": "rigid_pose_seat",
+    "fixture_asset": "parts/Casing Top.usd",
+    "fixture_rotation_xyz_deg": [0.0, 0.0, 0.0],
+    "fixture_world_xy_m": [0.55, -0.15],
+    "fixture_table_clearance_m": 0.075,
+    "fixture_clearance_note": "Elevated static fixture leaves clearance for the approximately 110mm under-head shank below the casing; table-top mounting obstructed full insertion. Not a target pose or scoring tolerance.",
+    "candidate_reset_hint": {"moving_rotation_xyz_deg": [90.0, 0.0, 0.0]},
+    "calibration_file": "m10_casing_bolt_evaluator_calibration.json",
+    "calibration_status": "pending",
+    "evaluation_status": "pending",
+    "physical_gt_verified": false,
+    "status": "pending_calibration",
+    "calibration_note": "One representative bolt bore is selected from public geometry at runtime. Candidate start orientation is only a scene reset hint; seating depth and positive/negative physical evaluator calibration are pending."
+  },
+  "m10-casing-nut": {
+    "evaluator_kind": "threaded_engagement",
+    "fixture_asset": "parts/M10 Casing Bolt.usd",
+    "fixture_rotation_xyz_deg": [90.0, 0.0, 0.0],
+    "fixture_world_xy_m": [0.55, -0.15],
+    "candidate_reset_hint": {"moving_rotation_xyz_deg": [0.0, 0.0, 0.0]},
+    "calibration_file": "m10_casing_nut_evaluator_calibration.json",
+    "calibration_status": "pending",
+    "evaluation_status": "pending",
+    "physical_gt_verified": false,
+    "status": "pending_threaded_physics",
+    "calibration_note": "The scene uses a separate static public bolt CAD fixture. Current authored bolt/nut collision meshes appear smooth and omit helical thread geometry; thread pitch, phase, engagement depth, torque criteria, and negative evaluator cases are therefore unverified. Do not count an axial push-fit as threaded completion."
+  },
+  "casing-top-to-base": {
+    "evaluator_kind": "multi_surface_mate",
+    "fixture_asset": "parts/Casing Base.usd",
+    "fixture_rotation_xyz_deg": [0.0, 0.0, 0.0],
+    "fixture_world_xy_m": [0.55, -0.15],
+    "candidate_reset_hint": {"moving_rotation_xyz_deg": [0.0, 180.0, 0.0]},
+    "calibration_file": "casing_top_base_evaluator_calibration.json",
+    "calibration_status": "pending",
+    "evaluation_status": "pending",
+    "physical_gt_verified": false,
+    "status": "pending_calibration",
+    "calibration_note": "The top/base parting-plane relation, shaft clearances, dynamic mass, multi-point seating tolerances, and positive/negative physical tests are uncalibrated. The source transform is not used as success GT."
+  },
+  "oil-level-indicator": {
+    "evaluator_kind": "rigid_pose_seat",
+    "fixture_asset": "parts/Casing Base.usd",
+    "fixture_rotation_xyz_deg": [0.0, 0.0, 0.0],
+    "fixture_world_xy_m": [0.55, -0.15],
+    "candidate_reset_hint": {"moving_rotation_xyz_deg": [0.0, 0.0, 0.0]},
+    "calibration_file": "oil_indicator_evaluator_calibration.json",
+    "calibration_status": "pending",
+    "evaluation_status": "pending",
+    "physical_gt_verified": false,
+    "status": "pending_calibration",
+    "calibration_note": "One of two repeated indicator placements is represented. Its opening identity is selected from public observations; axis, seat, release, stability, and negative evaluator criteria require calibration."
+  },
+  "breather-plug": {
+    "evaluator_kind": "rigid_pose_seat",
+    "fixture_asset": "parts/Casing Base.usd",
+    "fixture_rotation_xyz_deg": [90.0, 0.0, 0.0],
+    "fixture_world_xy_m": [0.55, -0.15],
+    "candidate_reset_hint": {"moving_rotation_xyz_deg": [0.0, 0.0, 0.0]},
+    "calibration_file": "breather_plug_evaluator_calibration.json",
+    "calibration_status": "pending",
+    "evaluation_status": "pending",
+    "physical_gt_verified": false,
+    "status": "pending_calibration",
+    "allow_provisional_open_mesh_mass": true,
+    "calibration_note": "The matching opening is selected from public observations. Fit, seat depth, release, stability, and negative evaluator criteria require calibration."
+  },
+  "bearing-32013-onto-output-shaft": {
+    "evaluator_kind": "rigid_pose_seat",
+    "fixture_asset": "parts/Output Shaft.usd",
+    "fixture_rotation_xyz_deg": [90.0, 0.0, 0.0],
+    "fixture_world_xy_m": [0.55, -0.15],
+    "candidate_reset_hint": {"moving_rotation_xyz_deg": [0.0, 0.0, 0.0]},
+    "calibration_file": "bearing_32013_output_evaluator_calibration.json",
+    "calibration_status": "pending",
+    "evaluation_status": "pending",
+    "physical_gt_verified": false,
+    "status": "pending_calibration",
+    "calibration_note": "Top/bottom instances share this representative bearing/shaft relation. Bore axis is inferred from public mesh; seat, orientation and negative evaluator criteria are uncalibrated."
+  },
+  "bearing-transfer-onto-shaft": {
+    "evaluator_kind": "rigid_pose_seat",
+    "fixture_asset": "parts/Transfer Shaft.usd",
+    "fixture_rotation_xyz_deg": [0.0, 90.0, 0.0],
+    "fixture_world_xy_m": [0.55, -0.15],
+    "candidate_reset_hint": {"moving_rotation_xyz_deg": [0.0, 0.0, 0.0]},
+    "calibration_file": "bearing_32205_transfer_evaluator_calibration.json",
+    "calibration_status": "pending",
+    "evaluation_status": "pending",
+    "physical_gt_verified": false,
+    "status": "pending_calibration",
+    "calibration_note": "Original sub_step_bearing_transfer and magic_assembly.py define the negative-X flat shoulder with the bearing wide +X face leading. Full CAD source-correspondence audit supports exposing shaft -X upward using +90deg Y fixture rotation. Earlier -90deg Y runs are opposite-end diagnostics only. Physical seating and negative evaluator calibration remain pending."
+  },
+  "bearing-input-bottom-onto-shaft": {
+    "evaluator_kind": "rigid_pose_seat",
+    "fixture_asset": "parts/Input Shaft.usd",
+    "fixture_rotation_xyz_deg": [-90.0, 0.0, 0.0],
+    "fixture_world_xy_m": [0.55, -0.15],
+    "candidate_reset_hint": {"moving_rotation_xyz_deg": [0.0, 0.0, 90.0]},
+    "calibration_file": "bearing_30304_input_evaluator_calibration.json",
+    "calibration_status": "pending",
+    "evaluation_status": "pending",
+    "physical_gt_verified": false,
+    "status": "pending_calibration",
+    "allow_provisional_open_mesh_mass": true,
+    "calibration_note": "Original sub_step_bearing_input_bottom maps bearing +X to shaft +Y: the -100.75 mm source offset plus the 16.25 mm wide face matches the negative-Y shoulder at -84.5 mm. The original fixture Rx(-90) already exposes shaft -Y upward; the correction is relative moving Rz(+90), making the wide +X face lead downward. Reset hints are not success GT. Input shaft collision geometry is open, so its mass profile remains provisional; physical seating and negative evaluator calibration remain pending."
+  },
+  "bearing-input-top-onto-shaft": {
+    "evaluator_kind": "rigid_pose_seat",
+    "fixture_asset": "parts/Input Shaft.usd",
+    "fixture_rotation_xyz_deg": [90.0, 0.0, 0.0],
+    "fixture_world_xy_m": [0.55, -0.15],
+    "candidate_reset_hint": {"moving_rotation_xyz_deg": [0.0, 0.0, 0.0]},
+    "calibration_file": "bearing_32205_input_evaluator_calibration.json",
+    "calibration_status": "pending",
+    "evaluation_status": "pending",
+    "physical_gt_verified": false,
+    "status": "pending_calibration",
+    "allow_provisional_open_mesh_mass": true,
+    "calibration_note": "User confirmed location B on 2026-10-24: the input-shaft middle shoulder from sub_step_bearing_input_top, not the first exposed shaft-end shoulder. Fixture Rx(+90) exposes positive Y upward so source relative Rz(-90) makes bearing wide +X face lead downward onto the negative-Y-facing shoulder at Y=-17.5mm. Previous Rx(-90) exposes the wrong insertion end for B. Source root offset local Y +2.732481mm is a private candidate, not physical-success certification or actor coordinates. Input shaft collision geometry is open, so its mass profile is provisional; seat and negative evaluator criteria remain uncalibrated."
+  }
+}

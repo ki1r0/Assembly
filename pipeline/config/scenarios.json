@@ -1,0 +1,54 @@
+{
+  "nominal-aligned": {
+    "bolt_offset_m": [
+      0,
+      0,
+      0
+    ],
+    "assembly_offset_m": [
+      0,
+      0,
+      0
+    ],
+    "bolt_lying": false
+  },
+  "bolt-position-shift": {
+    "bolt_offset_m": [
+      -0.03,
+      -0.04,
+      0
+    ],
+    "assembly_offset_m": [
+      0,
+      0,
+      0
+    ],
+    "bolt_lying": false
+  },
+  "bolt-horizontal-pose": {
+    "bolt_offset_m": [
+      0,
+      0,
+      0
+    ],
+    "assembly_offset_m": [
+      0,
+      0,
+      0
+    ],
+    "bolt_lying": true
+  },
+  "assembly-position-shift": {
+    "bolt_offset_m": [
+      0,
+      0,
+      0
+    ],
+    "assembly_offset_m": [
+      -0.035,
+      0.025,
+      0
+    ],
+    "bolt_lying": false
+  }
+}

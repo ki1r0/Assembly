@@ -1,0 +1,19 @@
+{
+  "scope": "Simulation deployment preparation; not validated real hardware",
+  "robot": "xarm7",
+  "gripper": "official UFACTORY G1, assumed",
+  "camera": "fixed D435i RGB-D simulation, assumed; not a certified RealSense sensor model",
+  "wrench": "six-axis simulation measurement; mounting and compensation require calibration",
+  "cases": [
+    {"task": "peg", "case": "nominal-aligned"},
+    {"task": "peg", "case": "bolt-horizontal-pose"},
+    {"task": "hub-cover", "case": "nominal-aligned"}
+  ],
+  "conditions": [
+    {"id": "clean", "seed": 0},
+    {"id": "environment", "seed": 1, "light_intensity_multiplier": 0.7, "part_initial_xy_jitter_m": 0.005},
+    {"id": "input_error", "seed": 2, "depth_std_m": 0.001, "depth_dropout_probability": 0.01, "force_std_n": 0.1, "torque_std_nm": 0.005}
+  ],
+  "noise_boundary": "Only actor observations may be corrupted. Native safety and evaluator use uncorrupted measurements. Perturbations are hypotheses for testing, not measured hardware specifications.",
+  "execution_status": "compatibility_validation_in_progress; no assembly rollout success claimed"
+}

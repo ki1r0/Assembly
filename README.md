@@ -1,3 +1,7 @@
+# Current xArm package (2026-10-28)
+
+The current simulation xArm pipeline is in `pipeline/`, with an independent peg benchmark in `benchmark/`. Start with [the deployment guide](docs/SETUP_CN.md) and [hardware integration boundaries](docs/REAL_ROBOT_MIGRATION_CN.md). Real hardware drivers and calibration are not yet validated. The original top-level code below is retained as the historical assembly-agent-core.
+
 # Assembly Agent Core
 
 GLM/OpenAI-compatible vision-language planning through RPent, with RGB-D geometry, reusable grasp/insertion skills, and HRC Cartesian servo control in Isaac Lab. [中文说明](README_CN.md)

@@ -1,0 +1,7 @@
+# Provenance and licensing
+
+The application and Isaac/HRC runtime were extracted from the existing local assembly experiment, preserving its geometry/servo execution and contact-boundary fixes. The original local Human-AI-Collab tree did not supply a LICENSE file. This extraction does not grant a new license for that code; its copyright holder must choose/confirm terms before public redistribution. No blanket Apache/MIT license is asserted for the whole repository.
+
+The selected `third_party/rpent/rpent/` source derives from [RLinf/RPent](https://github.com/RLinf/RPent) and the locally adapted fork used in these experiments. Its original copyright headers and [Apache-2.0 license](third_party/rpent/LICENSE) are retained. Local adaptations include episode control, request recording and actor file authorization. This extraction removes concrete model/robot backends and unused command-line/evaluation applications, uses model-independent component descriptions, removes a model-specific checkpoint configuration helper, and limits the robot package initializer to the retained generic components. This is a source subset, not an unchanged upstream release.
+
+NVIDIA Isaac Sim / Isaac Lab and robot assets have their own licenses and terms. Assembly CAD/USD parts and vendor assets are external inputs, not included. Python dependencies retain their respective licenses. No credentials, learned weights, existing episode logs, images or videos are included in the source distribution.

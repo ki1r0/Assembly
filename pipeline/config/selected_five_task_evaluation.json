@@ -1,0 +1,17 @@
+{
+  "description": "User-confirmed five task families, six scenarios per method, twelve rollouts total. Experiment specification, not an execution or success record.",
+  "methods": ["ours", "vlm-dewm"],
+  "budget_s_per_rollout": 1800,
+  "robot": "panda",
+  "shared_conditions": "Same scene, public RGB-D and robot feedback, physical action backend, safety protections, model service, task instructions and independent evaluator. No private evaluator input to either planner.",
+  "cases": [
+    {"id": "peg-upright", "task": "peg", "case": "nominal-aligned"},
+    {"id": "peg-horizontal", "task": "peg", "case": "bolt-horizontal-pose"},
+    {"id": "m10-casing-bolt", "task": "m10-casing-bolt", "case": "nominal-aligned"},
+    {"id": "small-cover", "task": "hub-cover-small", "case": "nominal-aligned"},
+    {"id": "output-cover", "task": "hub-cover", "case": "nominal-aligned"},
+    {"id": "bearing-input-middle-B", "task": "bearing-input-top-onto-shaft", "case": "nominal-aligned"}
+  ],
+  "paper": "https://arxiv.org/html/2602.15549v1",
+  "reporting": "Preserve every calibration attempt and rollout. Report calibration, infrastructure failure, task failure and independent physical success separately; no automatic retries of formal scored episodes."
+}

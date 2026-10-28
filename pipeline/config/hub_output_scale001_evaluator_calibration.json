@@ -1,0 +1,39 @@
+{
+  "cad_meters_per_source_unit": 0.001,
+  "physical_positive": true,
+  "physical_negatives_rejected": true,
+  "scope": "Output-cover endpoint seat, actual support, release and half-second retention only. Privileged initial-pose probes are not robot pickup or autonomous assembly success.",
+  "method": "Replay the preserved actual physical endpoint metrics under unchanged seat tolerances; historical native outcomes remain unchanged.",
+  "positive": {
+    "run": "runs/selected-evaluator-output-cad-datum-20261024/hub-cover-hub-positive-cad-datum",
+    "source": "private/evaluator-trace.json",
+    "regraded_status": "PASS",
+    "radial_error_m": 0.0003904717627298144,
+    "tilt_deg": 0.8410316036276437,
+    "axial_depth_m": 0.03170621490478509,
+    "maximum_window_penetration_m": 0.00005069673352409154,
+    "real_contact_samples": 60,
+    "window_samples": 60,
+    "released": true,
+    "solver_position_iterations": 192,
+    "solver_velocity_iterations": 1,
+    "sdf_resolution": 256,
+    "part_sleep_threshold": 0.0
+  },
+  "negatives": [
+    {
+      "run": "runs/selected-evaluator-calibration-20261023T183949Z/hub-cover-hub-offset-negative",
+      "regraded_status": "FAIL",
+      "reason": "52.77mm radial displacement, tilt and excessive penetration"
+    },
+    {
+      "run": "runs/selected-evaluator-calibration-20261023T183949Z/hub-cover-hub-tilt-negative",
+      "regraded_status": "FAIL",
+      "reason": "Tilt exceeds unchanged 2-degree criterion and no recorded support"
+    }
+  ],
+  "negative_scope_note": "Earlier solver/sleep settings differ. These preserved measurements support endpoint rejection only, not current-solver failure probabilities. Missing contact in the tilted case may be affected by sleep; tilt independently exceeds the unchanged criterion. No tolerance was tuned to force this rejection.",
+  "pose_tolerances_changed": false,
+  "robot_safety_limits_changed": false,
+  "xarm7_pickup_or_payload_certified": false
+}

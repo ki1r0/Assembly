@@ -20,3 +20,10 @@ checkpoints/
 *.egg-info/
 build/
 dist/
+
+# Local regenerated robot sources, licensed assets, shared request database.
+pipeline/third_party/xarm_ros2/
+_shared/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm

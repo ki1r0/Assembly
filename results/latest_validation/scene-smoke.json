@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "task": "peg",
+  "cad_meters_per_source_unit": 0.001,
+  "robot": "xarm7",
+  "observation_id": "generic-0",
+  "initial_rgb_exists": true,
+  "initial_depth_file_count": 1,
+  "initial_depth_exists": true,
+  "initial_feature_count": 0,
+  "action_count": 0,
+  "model_called": false,
+  "assembly_success_claimed": false
+}

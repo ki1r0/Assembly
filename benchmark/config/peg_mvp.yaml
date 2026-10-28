@@ -1,0 +1,38 @@
+suite_id: cape_assembly_peg_mvp_v01
+task_id: m6_hub_bolt_two_oclock_seating
+label: M6 insertion and seating, without threaded fastening
+instruction: >-
+  Pick up the loose M6 bolt, insert it into the small bolt hole at about the
+  two-o-clock position around the hub cover's large circular opening in the fixed
+  task-camera view, seat its head, release it and withdraw the gripper.
+backend: latest_generic_physics
+embodiment: panda
+controller: isaac_osc
+cad_meters_per_source_unit: 0.001
+policy_inputs: [rgb, depth, camera_calibration, robot_state, measured_wrench, public_cad]
+private_evaluator: assembly_bench.peg_mvp.PegProcessEvaluator
+calibration_status: pending_physical_positive_negative_validation
+variants: [nominal-aligned, bolt-horizontal-pose]
+target_mapping_source: config/fixture_calibration.json in the latest experiment
+runtime_privileged_state_edits: forbidden_after_reset
+evaluation:
+  score_fields: [assembly_success, evaluation_status, termination_reason, checkpoints]
+  legacy_native_success: retained_separately
+  stable_window_s: 1.0
+  control_hz: 20
+  development_simulation_budget_s: 600
+  official_budget_status: pending_reference_trajectory_timing
+acceptance:
+  physical_calibration_positive_count: 10
+  physical_calibration_negative_count: 20
+  independent_calibration_acceptance_count: 10
+  required_false_positive_count: 0
+  required_false_negative_count: 0
+  unknown_is_not_success: true
+  ours_required_full_physical_successes_per_variant: 1
+  independent_evaluation_instances_per_variant: 10
+  report_all_attempts: true
+  note: >-
+    These are finite MVP acceptance criteria, not a guarantee over all possible
+    states. Ours must complete both variants; its fixed-instance success rate
+    is reported honestly rather than requiring or manufacturing a 100% rate.
